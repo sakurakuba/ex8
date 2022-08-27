@@ -18,4 +18,3 @@ urlpatterns = [
     path('reviews/<int:pk>/delete/', DeleteReview.as_view(), name="review_delete"),
 ]
 
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

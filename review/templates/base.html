@@ -23,9 +23,23 @@
             <ul class="navbar-nav mt-3">
                 {% block nav%}
                 {% endblock %}
-                <li class="nav-item">
-                        <a class="nav-link" href="{% url "review:product_create" %}">Add new Product</a>
+
+            {% if request.user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url "accounts:logout" %}">Logout</a>
                     </li>
+                    <li class="nav-item">
+                        <p class="nav-link">Hi <a
+                                href="{% url "accounts:profile" request.user.pk %}">{{ user.username }}</a></p>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url "accounts:login" %}?next={{ request.get_full_path }}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url "accounts:registration" %}?next={{ request.get_full_path }}">Register</a>
+                    </li>
+                {% endif %}
 
             </ul>
         </div>

@@ -31,7 +31,7 @@
                 <div class="card mb-3">
                     <div class="card-body">
                         <p class="card-text">Score: {{ review.score }}</p>
-                        <p class="card-text">By: {{ review.author }}</p>
+                        <p class="card-text"><a href="{% url "accounts:profile" review.author.pk %}">By: {{ review.author }}</a></p>
                         <p class="card-text">{{ review.text }}</p>
                     </div>
                     <div class="btn-group w-100" role="group" aria-label="Basic mixed styles example">
