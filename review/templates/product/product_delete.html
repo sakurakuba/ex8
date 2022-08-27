@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Please, confirm "{{ product.name }} delete" ({{ product.get_category_display }})?</h1>
+    <h1>Please, confirm "{{ product.name }}" delete ({{ product.get_category_display }})?</h1>
     <form action="{% url "review:product_delete" product.pk %}" method="post">
         {% csrf_token %}
         <div class="btn-group">

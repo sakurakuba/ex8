@@ -4,9 +4,14 @@
 
 
 {% block nav %}
-    <li class="nav-item"><a class="nav-link" href="{% url 'review:review_create' product.pk %}">Add Review</a></li>
-    <li class="nav-item"><a class="nav-link" href="{% url 'review:product_update' product.pk %}">Update Product</a></li>
-    <li class="nav-item"><a class="nav-link" href="{% url 'review:product_delete' product.pk %}">Delete Product</a></li>
+    {% if request.user.is_authenticated %}
+        <li class="nav-item"><a class="nav-link" href="{% url 'review:review_create' product.pk %}">Add Review</a></li>
+        {% if user.is_superuser or perms.review.add_product or perms.review.delete_product %}
+            <li class="nav-item"><a class="nav-link" href="{% url 'review:product_create' %}">Add new Product</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'review:product_update' product.pk %}">Update Product</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'review:product_delete' product.pk %}">Delete Product</a></li>
+        {% endif %}
+    {% endif %}
 {% endblock %}
 
 
@@ -35,8 +40,10 @@
                         <p class="card-text">{{ review.text }}</p>
                     </div>
                     <div class="btn-group w-100" role="group" aria-label="Basic mixed styles example">
-                        <a class="btn btn-danger" href="{% url "review:review_update" review.pk %}">Update</a>
-                        <a class="btn btn-warning" href="{% url "review:review_delete" review.pk %}">Delete</a>
+                        {% if request.user.is_authenticated and user == review.author or u %}
+                            <a class="btn btn-danger" href="{% url "review:review_update" review.pk %}">Update</a>
+                            <a class="btn btn-warning" href="{% url "review:review_delete" review.pk %}">Delete</a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
