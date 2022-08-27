@@ -1,0 +1,241 @@
+[
+{
+  "model": "review.product",
+  "pk": 1,
+  "fields": {
+    "name": "Apple AirPods PRO",
+    "description": "Custom high-excursion Apple driver\r\nCustom high dynamic range amplifier\r\nActive Noise Cancellation\r\nTransparency mode\r\nVent system for pressure equalization\r\nSpatial audio with dynamic head tracking1\r\nAdaptive EQ",
+    "category": "audio",
+    "pr_img": "pr_images/airpods-pro-roundup.webp"
+  }
+},
+{
+  "model": "review.product",
+  "pk": 2,
+  "fields": {
+    "name": "Nike Pegasus Turbo Next Nature",
+    "description": "Let the Nike Pegasus Turbo Next Nature help you log the hard miles. Made with at least 50% recycled content by total weight of product, this esteemed stallion gives you a stretchy, just-right feel. Complete with lighter, responsive foam, it's made to help you increase tempo without sacrificing comfort as you push toward a personal best.",
+    "category": "shoes",
+    "pr_img": "pr_images/pegasus-turbo-next-nature.jpeg"
+  }
+},
+{
+  "model": "review.product",
+  "pk": 3,
+  "fields": {
+    "name": "Samsung 70\" - TU700D Series - 4K UHD LED LCD TV",
+    "description": "Smart TV Powered by Tizen\r\nCrystal Processor 4K\r\nWorks with Alexa and Google Assistant\r\nCrystal Display\r\n3 Year Warranty + HDMI Cable",
+    "category": "tv",
+    "pr_img": "pr_images/70samsung.webp"
+  }
+},
+{
+  "model": "review.product",
+  "pk": 4,
+  "fields": {
+    "name": "Mini S hookah",
+    "description": "Mini S - это по-настоящему большое достижение в создании комфортного во всех смыслах кальяна. Мы совместили миниатюрность и надежность, функциональность и простоту обслуживания. Собрав все это в стильный образ, получили Mini S. Оптимальный по юзабилити, интуитивно понятный, заставляющий наслаждаться собой бесконечное количество раз, кальян.",
+    "category": "other",
+    "pr_img": ""
+  }
+},
+{
+  "model": "review.product",
+  "pk": 5,
+  "fields": {
+    "name": "AAVVV",
+    "description": "AAAAA",
+    "category": "audio",
+    "pr_img": ""
+  }
+},
+{
+  "model": "review.product",
+  "pk": 6,
+  "fields": {
+    "name": "test",
+    "description": "asdad",
+    "category": "other",
+    "pr_img": "review/static/default_img/default.jpeg"
+  }
+},
+{
+  "model": "review.product",
+  "pk": 7,
+  "fields": {
+    "name": "Polly",
+    "description": "fagdfds\r\ndsfagfad",
+    "category": "audio",
+    "pr_img": "default.jpeg"
+  }
+},
+{
+  "model": "review.review",
+  "pk": 1,
+  "fields": {
+    "author": 1,
+    "product": 1,
+    "text": "MPLPOSPOA",
+    "score": 4,
+    "verified": false,
+    "created_at": "2022-08-27T10:06:18.291Z",
+    "updated_at": "2022-08-27T10:12:39.322Z"
+  }
+},
+{
+  "model": "review.review",
+  "pk": 3,
+  "fields": {
+    "author": 1,
+    "product": 4,
+    "text": "AMAZING!!!",
+    "score": 5,
+    "verified": false,
+    "created_at": "2022-08-27T10:13:37.265Z",
+    "updated_at": "2022-08-27T10:13:37.265Z"
+  }
+},
+{
+  "model": "review.review",
+  "pk": 4,
+  "fields": {
+    "author": 1,
+    "product": 2,
+    "text": "SUPER",
+    "score": 5,
+    "verified": false,
+    "created_at": "2022-08-27T10:13:52.904Z",
+    "updated_at": "2022-08-27T10:13:52.904Z"
+  }
+},
+{
+  "model": "review.review",
+  "pk": 5,
+  "fields": {
+    "author": 1,
+    "product": 3,
+    "text": "SO-SO",
+    "score": 3,
+    "verified": false,
+    "created_at": "2022-08-27T10:14:09.344Z",
+    "updated_at": "2022-08-27T10:14:09.344Z"
+  }
+},
+{
+  "model": "review.review",
+  "pk": 6,
+  "fields": {
+    "author": 1,
+    "product": 1,
+    "text": "CXVCX",
+    "score": 5,
+    "verified": false,
+    "created_at": "2022-08-27T10:14:26.550Z",
+    "updated_at": "2022-08-27T10:30:56.320Z"
+  }
+},
+{
+  "model": "review.review",
+  "pk": 7,
+  "fields": {
+    "author": 1,
+    "product": 1,
+    "text": "ghjhfj",
+    "score": 4,
+    "verified": false,
+    "created_at": "2022-08-27T10:29:20.644Z",
+    "updated_at": "2022-08-27T10:29:20.644Z"
+  }
+},
+{
+  "model": "review.review",
+  "pk": 8,
+  "fields": {
+    "author": 1,
+    "product": 1,
+    "text": "sdfsd",
+    "score": 5,
+    "verified": false,
+    "created_at": "2022-08-27T10:30:28.018Z",
+    "updated_at": "2022-08-27T10:30:28.018Z"
+  }
+},
+{
+  "model": "review.review",
+  "pk": 9,
+  "fields": {
+    "author": 2,
+    "product": 1,
+    "text": "asdaw",
+    "score": 1,
+    "verified": false,
+    "created_at": "2022-08-27T11:38:13.899Z",
+    "updated_at": "2022-08-27T11:38:13.899Z"
+  }
+},
+{
+  "model": "review.review",
+  "pk": 10,
+  "fields": {
+    "author": 2,
+    "product": 2,
+    "text": "gfhfsgs",
+    "score": 3,
+    "verified": false,
+    "created_at": "2022-08-27T11:38:41.506Z",
+    "updated_at": "2022-08-27T11:38:41.506Z"
+  }
+},
+{
+  "model": "review.review",
+  "pk": 11,
+  "fields": {
+    "author": 2,
+    "product": 5,
+    "text": "fgsdfgd",
+    "score": 4,
+    "verified": false,
+    "created_at": "2022-08-27T11:51:47.183Z",
+    "updated_at": "2022-08-27T11:51:47.183Z"
+  }
+},
+{
+  "model": "review.review",
+  "pk": 12,
+  "fields": {
+    "author": 3,
+    "product": 4,
+    "text": "dssafsd",
+    "score": 1,
+    "verified": false,
+    "created_at": "2022-08-27T12:25:20.462Z",
+    "updated_at": "2022-08-27T12:25:20.462Z"
+  }
+},
+{
+  "model": "review.review",
+  "pk": 13,
+  "fields": {
+    "author": 3,
+    "product": 1,
+    "text": "dfgdf",
+    "score": 2,
+    "verified": false,
+    "created_at": "2022-08-27T12:25:55.817Z",
+    "updated_at": "2022-08-27T12:25:55.817Z"
+  }
+},
+{
+  "model": "review.review",
+  "pk": 14,
+  "fields": {
+    "author": 2,
+    "product": 1,
+    "text": "dsfds",
+    "score": 2,
+    "verified": false,
+    "created_at": "2022-08-27T12:54:06.608Z",
+    "updated_at": "2022-08-27T12:54:12.060Z"
+  }
+}
+]
