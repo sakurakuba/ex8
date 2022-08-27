@@ -17,7 +17,7 @@ class Product(models.Model):
     description = models.TextField(max_length=1000, null=True, blank=True, verbose_name='Description')
     category = models.CharField(max_length=20, default=DEFAULT_CATEGORY, choices=CATEGORY_CHOICES,
                                 verbose_name='Category')
-    pr_img = models.ImageField(upload_to="pr_images", null=True, blank=True, verbose_name="Product Image")
+    pr_img = models.ImageField(upload_to="pr_images", default="default.jpeg", null=True, blank=True, verbose_name="Product Image")
 
     def __str__(self):
         return f'{self.name} - {self.category}'

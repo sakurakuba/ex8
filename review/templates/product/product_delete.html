@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Product Delete{% endblock %}
+
+{% block nav %}
+    <li class="nav-item"><a class="nav-link" href="{% url 'review:product_view' product.pk %}">Cancel</a></li>
+{% endblock %}
+
+{% block content %}
+    <h1>Please, confirm "{{ product.name }} delete" ({{ product.get_category_display }})?</h1>
+    <form action="{% url "review:product_delete" product.pk %}" method="post">
+        {% csrf_token %}
+        <div class="btn-group">
+            <button class="btn btn-danger" type="submit">Delete</button>
+            <a class="btn btn-primary" href="{% url 'review:product_view' product.pk %}">Cancel</a>
+        </div>
+    </form>
+{% endblock %}

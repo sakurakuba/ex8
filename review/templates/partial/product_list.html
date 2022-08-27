@@ -6,7 +6,7 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ product.name }}</h5>
                 </div>
-                <a href="#" class="card-link btn btn-primary">More..</a>
+                <a href="{% url "review:product_view" product.pk %}" class="card-link btn btn-primary">More..</a>
             </div>
         </div>
     {% empty %}
