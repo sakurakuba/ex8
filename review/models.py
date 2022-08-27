@@ -1,7 +1,7 @@
 from django.contrib.auth import get_user_model
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
-
+from django.db.models import Sum, F, Count
 
 DEFAULT_CATEGORY = 'other'
 CATEGORY_CHOICES = (
@@ -21,6 +21,12 @@ class Product(models.Model):
 
     def __str__(self):
         return f'{self.name} - {self.category}'
+
+    def get_avg_score(self):
+        avg_score = self.products.aggregate(avg_score=(Sum(F("score")) / Count(F("author__id"))))
+        if avg_score['avg_score']:
+            return avg_score['avg_score']
+        return 0
 
     class Meta:
         verbose_name = 'Product'

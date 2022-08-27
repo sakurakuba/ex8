@@ -4,6 +4,7 @@
 
 
 {% block nav %}
+    <li class="nav-item"><a class="nav-link" href="{% url 'review:review_create' product.pk %}">Add Review</a></li>
     <li class="nav-item"><a class="nav-link" href="{% url 'review:product_update' product.pk %}">Update Product</a></li>
     <li class="nav-item"><a class="nav-link" href="{% url 'review:product_delete' product.pk %}">Delete Product</a></li>
 {% endblock %}
@@ -16,10 +17,32 @@
         {% endif %}
         <div class="card-body">
             <h1>{{ product.name }}</h1>
+            <p class="card-text">Score: {{ product.get_avg_score }}</p>
             <p class="card-text">Category: {{ product.category }}</p>
             <p class="card-text">Description: {{ product.description }}</p>
             <p class="pre">{{ product.description }}</p>
         </div>
+    </div>
+
+    <h3 class="my-3 text-center">Reviews</h3>
+    <div class="row">
+        {% for review in reviews %}
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <p class="card-text">Score: {{ review.score }}</p>
+                        <p class="card-text">By: {{ review.author }}</p>
+                        <p class="card-text">{{ review.text }}</p>
+                    </div>
+                    <div class="btn-group w-100" role="group" aria-label="Basic mixed styles example">
+                        <a class="btn btn-danger" href="{% url "review:review_update" review.pk %}">Update</a>
+                        <a class="btn btn-warning" href="{% url "review:review_delete" review.pk %}">Delete</a>
+                    </div>
+                </div>
+            </div>
+        {% empty %}
+            <p>No reviews yet</p>
+        {% endfor %}
     </div>
 {% endblock %}
 

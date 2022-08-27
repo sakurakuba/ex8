@@ -5,6 +5,7 @@
             <div class="card mb-3">
                 <div class="card-body">
                     <h5 class="card-title">{{ product.name }}</h5>
+                    <h6 class="card-title">Review score: {{ product.get_avg_score }}</h6>
                 </div>
                 <a href="{% url "review:product_view" product.pk %}" class="card-link btn btn-primary">More..</a>
             </div>
