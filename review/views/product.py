@@ -7,4 +7,5 @@ from review.models import Product
 class IndexView(ListView):
     model = Product
     template_name = "product/index.html"
+    context_object_name = "products"
 
